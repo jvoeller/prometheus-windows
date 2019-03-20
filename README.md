@@ -2,7 +2,15 @@
 
 This is a repository with Prometheus pull servers in Windows Docker containers.
 
-### Prerequisites
+## Usage
+
+Run the following command to get this container running!
+
+```bash
+docker run --rm -p 9090:9090 johnnyhuy/prometheus-windows
+```
+
+## Prerequisites
 
 - Docker & Windows (duhh!)
 
