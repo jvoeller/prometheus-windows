@@ -4,10 +4,21 @@ This is a repository with Prometheus pull servers in Windows Docker containers.
 
 ## Usage
 
-Run the following command to get this container running!
+Run the following command to get this container running! There is also support for previous Windows versions.
 
 ```bash
-docker run --rm -p 9090:9090 johnnyhuy/prometheus-windows
+# Windows Server 1809
+docker run --rm -p 9090:9090 johnnyhuy/prometheus-windows:latest
+
+# OR
+
+# Windows Server 1803
+docker run --rm -p 9090:9090 johnnyhuy/prometheus-windows:1803
+
+# OR
+
+# Windows Server 2016
+docker run --rm -p 9090:9090 johnnyhuy/prometheus-windows:win2016
 ```
 
 ## Prerequisites
