@@ -20,7 +20,6 @@ RUN Rename-Item -Path $('C:\prometheus-{0}.windows-amd64' -f $env:PROMETHEUS_VER
 
 FROM mcr.microsoft.com/windows/nanoserver:sac2016
 
-COPY --from=tar /windows/system32/netapi32.dll /windows/system32/netapi32.dll
 COPY --from=tar /download/prometheus.exe      /bin/prometheus.exe
 COPY --from=tar /download/promtool.exe        /bin/promtool.exe
 COPY --from=tar /download/prometheus.yml      /etc/prometheus/prometheus.yml
