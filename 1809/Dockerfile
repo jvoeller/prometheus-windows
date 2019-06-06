@@ -23,11 +23,13 @@ FROM mcr.microsoft.com/windows/nanoserver:$tag
 COPY --from=tar /windows/system32/netapi32.dll /windows/system32/netapi32.dll
 COPY --from=tar /download/prometheus.exe      /bin/prometheus.exe
 COPY --from=tar /download/promtool.exe        /bin/promtool.exe
-COPY --from=tar /download/prometheus.yml      /etc/prometheus/prometheus.yml
 COPY --from=tar /download/console_libraries/  /etc/prometheus/
 COPY --from=tar /download/consoles/           /etc/prometheus/
+RUN Invoke-Webrequest https://raw.githubusercontent.com/jvoeller/prometheus-windows/master/prometheus.yml -Outfile \etc\prometheus\prometheus.yml
 
 EXPOSE     9090
+
+
 # VOLUME     C:\prometheus
 # WORKDIR    C:\prometheus
 ENTRYPOINT [ "C:\\bin\\prometheus.exe" ]
