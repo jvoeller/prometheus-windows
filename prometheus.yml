@@ -26,5 +26,5 @@ scrape_configs:
     # scheme defaults to 'http'.
 
     static_configs:
-      - targets: ['52.149.96.45']
-        metric_path: "/"
+      - targets: ['152.152.0.5']
+        
