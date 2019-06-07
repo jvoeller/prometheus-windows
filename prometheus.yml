@@ -27,3 +27,4 @@ scrape_configs:
 
     static_configs:
       - targets: ['52.149.96.45']
+        metric_path: "/"
