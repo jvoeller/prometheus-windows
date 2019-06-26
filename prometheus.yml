@@ -27,4 +27,4 @@ scrape_configs:
 
     static_configs:
       - targets: ['152.152.0.5']
-        
+      - targets: ['51.105.177.254:3100']
