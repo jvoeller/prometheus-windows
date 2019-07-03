@@ -23,7 +23,7 @@ scrape_configs:
   - job_name: 'prometheus'
     file_sd_configs:
       - files:
-        - targets.json
+        - "C:\\tmp\\targets.json"
     # metrics_path defaults to '/metrics'
     # scheme defaults to 'http'.
 
